@@ -1,0 +1,79 @@
+.blind {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0,0,0,0);
+}
+
+.ft-inner {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* 여기에 z-index 주면 효과가 제대로 안나옴 */
+.more-link {
+    display: block;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    width: 213px;
+    height: 49px;
+    font-family: 'franklin-gothic-urw';
+    font-weight: 500;
+    font-size: 26px;
+    text-align: center;
+    line-height: 49px;
+    letter-spacing: -0.02em;
+    transition: color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    /* background-color: #fcf1e4; */
+}
+
+.more-link:hover {
+    color: #ce0e2d;
+}
+
+.more-link::before {
+    z-index: -5;
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    top: -2px;
+    bottom: -2px;
+    content: '';
+    display: block;
+    width: auto;
+    height: auto;
+    background-color: #fef1e2;
+}
+.more-link:after {
+    z-index: -5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #ce0e2d;
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.more-link:hover:after {
+    left: 100%;
+    top: 0;
+    width: 0;
+    /* after에 배경색 줘도 아예 넓이를 0으로 만들어서 안나옴 */
+    /* background-color: #fcf1e4; */
+    
+}
+
+/* before를 따로 만들어서 after가 사라지는 동시에 배경을 채울 수 있도록 
+만들어야함! */
+
+.slide-inner {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 40px 90px 83px;
+}
+

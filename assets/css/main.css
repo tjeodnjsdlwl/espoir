@@ -1,0 +1,595 @@
+.top-up {
+    display: block;
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background: url(../images/ic_top.png) no-repeat center/100%;
+}
+
+main.container {
+    position: relative;
+}
+
+/* sc-visual ----------------------------------------------------- */
+/* 슬라이드 01,02,03,04 각각 설정 좀 있다 다시 설정 */
+.sc-visual {
+    height: 100vh;
+    width: 100vw;
+}
+.sc-visual .slide-area {
+    position: relative;
+    height: 100%;
+}
+
+.sc-visual .swiper-wrapper {
+    height: 100%;
+}
+.sc-visual .swiper-slide {
+    height: 100%;
+}
+.sc-visual .swiper-slide video,
+.sc-visual .swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.sc-visual .text-box {
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    position: absolute;
+    left: 50%;
+    bottom: 185px;
+    width: 50%;
+    height: auto;
+    padding: 0 40px 0 80px;
+    color: #000;
+}
+
+.sc-visual .text-box .catagory {
+    margin-bottom: 20px;
+    font-family: 'franklin-gothic-urw';
+    font-size: 24px;
+    line-height: 1em;
+    text-align: left;
+    letter-spacing: -0.04em;
+}
+.sc-visual .text-box .title {
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-family: 'yoonb';
+    letter-spacing: -0.052em;
+    word-break: keep-all;
+}
+
+.sc-visual .swiper-slide.white .catagory,
+.sc-visual .swiper-slide.white .title {
+    color: #fff;
+}
+
+.sc-visual .flex-area {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.sc-visual .flex-area .desc {
+    order: 1;
+    font-size: 20px;
+    line-height: 1em;
+    letter-spacing: -0.05em;
+    opacity: 0.7;
+}
+
+.sc-visual .flex-area .link-box {
+    display: flex;
+    gap: 8px;
+}
+
+/* slide02, slide03 setting */
+.sc-visual .swiper-slide.white .link-box {
+    margin-bottom: 30px;
+}
+
+.sc-visual .swiper-slide.white .more-link {
+    color: #ce0e2d;
+}
+.sc-visual .swiper-slide.white .more-link:hover {
+    color: #fef1e2;
+}
+
+.sc-visual .swiper-slide.white .more-link:after {
+    background-color: #fef1e2;
+}
+
+.sc-visual .swiper-slide.white .more-link:hover:after {
+    background-color: #ce0e2d;
+}
+
+.sc-visual .swiper-slide.white .more-link::before {
+    background-color: #ce0e2d;
+}
+
+.sc-visual .slide-area .pag-area {
+    position: absolute;
+    bottom: 68px;
+    top: auto;
+    z-index: 5;
+}
+.sc-visual .pag-area .pag-box {
+    position: relative;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 12px 90px;
+}
+.sc-visual .slide-area .pagination {
+    /* position: absolute;
+    bottom: 68px;
+    top: auto;
+    z-index: 5; */
+    height: 2px;
+}
+
+.sc-visual .slide-area .swiper-pagination-bullet {
+    width: 8px;
+    display: block;
+    height: 3px;
+    border-radius: 0;
+    background: transparent;
+}
+
+
+/* 여기서 부터 크게크게 작업해나갔음, 개발자모드에서 복사해 온 코드 중
+   정리해야할 거 없는지 다 체크하고 다듬을 것!!!             */
+/* sc-consult ----------------------------------------------------- */
+/* 밑에 설정들은 애니메이션 후  결과물 설정 */
+.sc-consult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 140px 0 108px;
+}
+.sc-consult .headline {
+    order: 2;
+    margin-bottom: 0.2em;
+    padding-top: 44px;
+    font-weight: 700;
+    font-size: 35px;
+    color: #ce0e2d;
+}
+.sc-consult img {
+    width: 1370px;
+}
+.sc-consult .deco-area {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sc-consult .deco-area .top {
+    width: 375px;
+    will-change: transform, opacity;
+    opacity: 0;
+    transform: translate3d(0, -128px, 0);
+    transition: all 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sc-consult .deco-area .top.on {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+.sc-consult .deco-area .bottom {
+    width: 717px;
+}
+.sc-consult .desc {
+    order: 3;
+    font-family: 'yoon';
+    font-size: 20px;
+    color: #1b1919;
+    letter-spacing: -0.045em;
+    line-height: 1.6;
+    word-break: keep-all;
+    padding-bottom: 44px;
+}
+.sc-consult .more-link {
+    order: 4;
+    font-family: 'yoonb';
+    font-size: 20px;
+}
+
+/* sc-nbest ----------------------------------------------------- */
+.sc-nbest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 74px;
+    padding-top: 90px;
+}
+
+.sc-nbest .title {}
+.sc-nbest .flex-area {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.sc-nbest .slide-area {
+    flex: 1;
+    position: relative;
+}
+.sc-nbest .swiper-wrapper {
+    width: 749px;
+}
+
+.sc-nbest .swiper-slide {
+    height: 100%;
+}
+.sc-nbest .swiper-slide a {}
+.sc-nbest .swiper-slide img {
+    height: 100%;
+}
+.sc-nbest .slide-area .btn {
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.2);
+}
+/* 스와퍼 기본값 after가 없어지지 않고 있음... */
+.sc-nbest .slide-area .btn.prev {
+    left: 30px;
+    background-image: url(../images/nbest_btn_prev.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.sc-nbest .slide-area .btn.next {
+    right: 30px;
+    background-image: url(../images/nbest_btn_next.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.sc-nbest .product-list {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.sc-nbest .product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fdfcfc;
+}
+/* 짝이 맞는 슬라이드로 변경 시에 바뀌는 배경색 */
+.sc-nbest .product-item.on {
+    background: #faf6f3;
+}
+
+.sc-nbest .product-item .img-box {
+    padding: 4.926% 9.852% 8px;
+}
+.sc-nbest .img-box img {
+    width: 100%;
+    height: auto;
+}
+.sc-nbest .product-item .text-box {
+    font-size: 0;
+    text-align: center;
+    padding: 0 20px 20px;
+}
+.sc-nbest .text-box .title {
+    color: #1b1919;
+    font-size: 1.176vw;
+    height: 3em;
+    margin-bottom: 0.4em;
+    line-height: 1.5;
+}
+.sc-nbest .text-box .desc {
+    color: #1b1919;
+    font-size: 1.176vw;
+    margin-bottom: 0.8em;
+    font-weight: 700;
+    font-family: 'yoonb';
+    letter-spacing: -0.05em;
+}
+.sc-nbest .text-box .show-link {
+    position: relative;
+    font-size: 1.4117vw;
+    font-family: 'franklin-gothic-urw';
+    font-weight: 500;
+    font-style: italic;
+    color: #ce0e2d;
+    line-height: 1.1;
+}
+.sc-nbest .text-box .show-link::after {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ce0e2d;
+}
+
+/* sc-gift ----------------------------------------------------- */
+.sc-gift {
+}
+
+.sc-gift .slide-inner {
+    display: flex;
+    align-items: center;
+    padding: 168px 0 127px 97px;
+}
+.sc-gift .slide-inner:hover .slide-area .btn {
+    opacity: 1;
+} 
+.sc-gift .text-area {
+    /* background: #0f0; */
+    z-index: 5;
+    position: relative;
+    width: 460px;
+    height: 370px;
+    padding-top: 68px;
+    letter-spacing: -0.06em;
+}
+.sc-gift .text-area .headline {
+    margin-bottom: 21px;
+}
+.sc-gift .text-box {}
+.sc-gift .text-box .title {
+    margin-bottom: 0.25em;
+    font-weight: 700;
+    font-size: 21px;
+    color: #1b1919;
+}
+.sc-gift .text-box .desc {
+    padding-right: 15px;
+    font-size: 18px;
+    color: #1b1919;
+}
+.sc-gift .text-area .more-link {
+    margin-top: 42px;
+}
+
+.sc-gift .slide-area {
+    flex: 1;
+    position: relative;
+    
+}
+.sc-gift .slide-area .swiper-wrapper {
+    display: flex;
+}
+.sc-gift .swiper-wrapper .swiper-slide {
+    width: 370px;
+    height: 370px;
+    overflow: hidden;
+}
+.sc-gift .swiper-slide a {
+}
+.sc-gift .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sc-gift .slide-area .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 65px;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.sc-gift .slide-area .btn.prev {
+    left: 15px;
+    background: url(../images/btn_prev.png) no-repeat 50% 0;
+}
+.sc-gift .slide-area .btn.next {
+    right: 30px;
+    background: url(../images/btn_next.png) no-repeat 50% 0;
+}
+
+/* sc-live ----------------------------------------------------- */
+.sc-live {
+    background: #f6efea;
+}
+
+.sc-live .slide-inner {
+    display: flex;
+    gap: 15px;
+    padding: 102px 0 102px 97px;
+}
+.sc-live .slide-inner:hover .slide-area .btn {
+    opacity: 1;
+} 
+.sc-live .text-area {
+    z-index: 5;
+    position: relative;
+    width: 460px;
+    height: 463px;
+    padding-top: 68px;
+    letter-spacing: -0.06em;
+    overflow: hidden;
+}
+.sc-live .text-area .headline {
+    margin-bottom: 21px;
+}
+.sc-live .text-box {}
+.sc-live .text-box .text-group {}
+/* 작업 중 none */
+.sc-live .text-group:not(:first-child){
+    display: none;
+}
+.sc-live .text-group .title {
+    margin-bottom: 0.25em;
+    padding-right: 15px;
+    font-weight: 700;
+    font-size: 21px;
+    color: #1b1919;
+    letter-spacing: -0.06em;
+}
+.sc-live .text-group .desc {
+    font-size: 18px;
+    color: #1b1919;
+    letter-spacing: -0.05em;
+}
+.sc-live .text-group .hash-link {
+    color: #666;
+}
+
+.sc-live .slide-area {
+    position: relative;
+    flex: 1;
+}
+.sc-live .slide-area .swiper-wrapper {
+    display: flex;
+}
+.sc-live .swiper-wrapper .swiper-slide {
+    position: relative;
+    width: 830px;
+    height: 467px;
+    pointer-events: none;
+}
+.sc-live .swiper-slide::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url(../images/live_btn_play.png) no-repeat center center;
+    cursor: pointer;
+}
+.sc-live .swiper-slide a {
+}
+.sc-live .swiper-slide img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+.sc-live .slide-area .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 65px;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.sc-live .slide-area .btn.prev {
+    left: 15px;
+    background: url(../images/btn_prev.png) no-repeat 50% 0;
+}
+.sc-live .slide-area .btn.next {
+    right: 30px;
+    background: url(../images/btn_next.png) no-repeat 50% 0;
+}
+
+
+/* sc-tok ----------------------------------------------------- */
+.sc-tok {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    padding: 140px 0 130px;
+}
+.sc-tok .headline {}
+.sc-tok .slide-area {}
+.sc-tok .slide-area .swiper-wrapper {
+    display: flex;
+    /* justify-content: space-around; */
+    gap: calc(140px / 3);
+    margin-bottom: 20px;
+}
+.sc-tok .swiper-wrapper .swiper-slide {
+    position: relative;
+    width: 325px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.sc-tok .swiper-wrapper .swiper-slide::after {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    background: url(../images/tok_btn_play.png) no-repeat 50% 50%;
+}
+.sc-tok .swiper-slide a {}
+.sc-tok .swiper-slide img {}
+.sc-tok .iframe-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 90;
+}
+.sc-tok .iframe-area .iframe-box {
+
+}
+.sc-tok .iframe-area .iframe-box iframe {
+}
+.sc-tok .swiper-slide .iframe-area .close {}
+
+/* sc-board ----------------------------------------------------- */
+.sc-board {
+    height: 70px;
+    line-height: 70px;
+    border-top: 1px solid #f2f2f2;
+    background: #fff;
+}
+.sc-board .board-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+    height: 70px;
+}
+.sc-board .board-area .catagory {
+    font-size: 14px;
+    font-family: 'yoonb';
+    color: #000;
+}
+.sc-board .board-area .swiper-wrapper {
+    width: 350px;
+    font-size: 14px;
+    color: #000;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.sc-board .board-area .board-link {
+    padding-left: 10px;
+    font-family: 'Marian';
+    font-size: 13px;
+    color: #000;
+    font-weight: bold;
+}
+
+
+
